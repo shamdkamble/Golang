@@ -1,7 +1,11 @@
 package main 
 
-import "fmt"
+import (
 
+"fmt"
+"math/rand"
+
+)
 var var1 int = 10
 
 const var2 string = "sham"
@@ -9,8 +13,27 @@ const var2 string = "sham"
 
 func main(){
 
-    var3 := 25
-    fmt.Printf("The value of var3 is %v and the type is %T\n",var3,var3)
-    fmt.Printf("The value of var2 is %v and the type is %T\n",var2,var2)
-    fmt.Printf("The value of var1 is %v and the type is %T",var1,var1)
+   x:= rand.Intn(10)
+   y:= rand.Intn(10)
+   
+   switch{
+   
+   case x<4 && y<4:
+   
+   fmt.Printf("The value %v and %v is less than 4 \n",x,y)
+   
+   case x>6 && y>6:
+   fmt.Printf("The value %v and %v is greater than 6\n",x,y)
+   
+   
+   
+   case x>=4 && x<=6:
+   fmt.Printf("The value %v is >= 4 and <=6 ",x)
+   
+   case y!=5 :
+   fmt.Printf("The value %v is not = 5 ",y)
+   
+   default:
+   fmt.Println("None of the  cases met")   
+  }
 }
